@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 押下時 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!-- ボタンの色 -->
+            <solid android:color="#444444" />
+            <!-- ボタンの角丸を設定 -->
+            <corners android:radius="12sp" />
+        </shape>
+    </item>
+
+    <!-- 通常時 -->
+    <item android:state_pressed="false" android:state_focused="false">
+        <shape android:shape="rectangle">
+            <!-- ボタンの色 -->
+            <solid android:color="#ffffff" />
+            <!-- ボタンの角丸を設定 -->
+            <corners android:radius="12sp" />
+        </shape>
+    </item>
+    <!-- フォーカス時 -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <!-- ボタンの色 -->
+            <solid android:color="#aaaaaa" />
+            <!-- ボタンの角丸を設定 -->
+            <corners android:radius="12sp" />
+        </shape>
+    </item>
+
+</selector>

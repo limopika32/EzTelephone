@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageMain">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_call"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/c_call"
+            android:text="@string/call"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ViewSizeSp"
+            app:icon="@android:drawable/stat_sys_phone_call"
+            app:iconGravity="textStart"
+            app:iconPadding="16dp"
+            app:iconSize="@dimen/ViewSizeDp"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/design_default_color_secondary_variant" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="250dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="@dimen/phoneButtonConst"
+            android:autoSizeMaxTextSize="@dimen/ViewSizeSp"
+            android:autoSizeMinTextSize="@dimen/ViewSizeSp2"
+            android:gravity="bottom|start"
+            android:scrollbars="vertical"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/space2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="@dimen/phoneButtonConst"
+            android:backgroundTint="@color/c_delete"
+            android:text="@string/delete"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:icon="@android:drawable/ic_input_delete"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="@dimen/ViewSizeDp2"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/space2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:strokeColor="@color/design_default_color_error" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/space3"
+            tools:layout_editor_absoluteX="-164dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <Button
+                    android:id="@+id/button_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b1m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b2m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b3m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <Button
+                    android:id="@+id/button_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b4m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b5m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b6m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <Button
+                    android:id="@+id/button_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b7m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b8m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b9m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <Button
+                    android:id="@+id/button_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/bAm"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/b0m"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenkeySizeDp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tenkey_layout"
+                    android:gravity="center|center_vertical"
+                    android:shadowColor="@color/half_gray"
+                    android:text="@string/bBm"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/tenkey_prim"
+                    android:textColorLink="@color/tenkey_prim"
+                    android:textSize="@dimen/ViewSizeSp"
+                    app:backgroundTint="@null"
+                    app:strokeColor="@color/black" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/button_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/address"
+            android:textSize="16sp"
+            app:icon="@android:drawable/ic_dialog_dialer"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="@dimen/ViewSizeDp3"
+            app:layout_constraintBottom_toTopOf="@+id/button_del"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

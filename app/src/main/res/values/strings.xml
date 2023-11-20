@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">EzTelephone</string>
+    <string name="call">通話</string>
+    <string name="delete">削除</string>
+    <string name="b1m">1</string>
+    <string name="b2m">2</string>
+    <string name="b3m">3</string>
+    <string name="b4m">4</string>
+    <string name="b5m">5</string>
+    <string name="b6m">6</string>
+    <string name="b7m">7</string>
+    <string name="b8m">8</string>
+    <string name="b9m">9</string>
+    <string name="b0m">0</string>
+    <string name="bAm">*</string>
+    <string name="bBm">#</string>
+
+    <string name="b1s">QZ</string>
+    <string name="b2s">ABC</string>
+    <string name="b3s">DEF</string>
+    <string name="b4s">GHI</string>
+    <string name="b5s">JKL</string>
+    <string name="b6s">MNO</string>
+    <string name="b7s">PQRS</string>
+    <string name="b8s">TUV</string>
+    <string name="b9s">WXYZ</string>
+    <string name="b0s">+</string>
+    <string name="bAs"> </string>
+    <string name="bBs"> </string>
+    <string name="dial">ダイヤル</string>
+    <string name="cannotGet">履歴取得に失敗しました</string>
+    <string name="address">電話帳</string>
+
+</resources>

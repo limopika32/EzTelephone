@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="phoneButtonConst">32dp</dimen>
+    <dimen name="ViewSizeDp">32dp</dimen>
+    <dimen name="ViewSizeDp2">24dp</dimen>
+    <dimen name="ViewSizeSp">32sp</dimen>
+    <dimen name="ViewSizeSp2">18sp</dimen>
+    <dimen name="ViewSizeSp3">16sp</dimen>
+    <dimen name="tenkeySizeDp">84dp</dimen>
+    <dimen name="ViewSizeDp3">16dp</dimen>
+</resources>

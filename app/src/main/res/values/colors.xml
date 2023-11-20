@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="c_delete">#FFCC0000</color>
+    <color name="c_call">#FF00AA00</color>
+    <color name="nan">#00000000</color>
+    <color name="tenkey_prim">#007FAC</color>
+    <color name="tenkey_high">#76D1FF</color>
+    <color name="half_gray">#88000000</color>
+</resources>
