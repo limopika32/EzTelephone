@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     // パーミッションの利用が許可されていない
-                    // 今回はトーストを出してお茶を濁す程度
                     Toast.makeText(this, "連絡先の利用が許可されていません", Toast.LENGTH_LONG).show();
                     finish();
                 }
@@ -72,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     // パーミッションの利用が許可されていない
-                    // 今回はトーストを出してお茶を濁す程度
                     Toast.makeText(this, "通話履歴の利用が許可されていません", Toast.LENGTH_LONG).show();
                     finish();
                 }
@@ -83,25 +81,17 @@ public class MainActivity extends AppCompatActivity {
     private void getPermission(){
         // パーミッションがアプリに付与されているか確認する
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            // deny
             Log.v("MainActivity", "API Level = " + Build.VERSION.SDK_INT + ": パーミッションが付与されていない");
-            // パーミッションが付与されていない場合、
-            // パーミッションを要求する（ユーザに許可を求めるダイアログを表示する）
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CODE_READ_CONTACTS);
         } else {
-            // API Level 23未満(Marshmallow)は、問答無用でこのelseブロックになります
             Log.v("MainActivity", "API Level = " + Build.VERSION.SDK_INT + ": パーミッションが付与されている");
-            // パーミッションが付与されているので、画面遷移します
         }
-        // パーミッションがアプリに付与されているか確認する
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
             Log.v("MainActivity", "API Level = " + Build.VERSION.SDK_INT + ": パーミッションが付与されていない");
-            // パーミッションが付与されていない場合、
-            // パーミッションを要求する（ユーザに許可を求めるダイアログを表示する）
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_CALL_LOG}, REQUEST_CODE_READ_CALL_LOG);
         } else {
-            // API Level 23未満(Marshmallow)は、問答無用でこのelseブロックになります
             Log.v("MainActivity", "API Level = " + Build.VERSION.SDK_INT + ": パーミッションが付与されている");
-            // パーミッションが付与されているので、画面遷移します
         }
     }
 
@@ -125,11 +115,7 @@ public class MainActivity extends AppCompatActivity {
         // 通話ログの取得
         ContentResolver resolver = this.getContentResolver();
         cursor = resolver.query(
-                CallLog.Calls.CONTENT_URI, // データの種類
-                null, // 項目(null 全項目)
-                null, // フィルタ条件(null　フィルタなし)
-                null, // フィルタ用パラメータ
-                CallLog.Calls.DEFAULT_SORT_ORDER // ソート
+                CallLog.Calls.CONTENT_URI, null, null, null, CallLog.Calls.DEFAULT_SORT_ORDER
         );
 
         try {
